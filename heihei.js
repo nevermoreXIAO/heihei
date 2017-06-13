@@ -22,4 +22,17 @@ var game={
         this.randomNum();
         //document.write(this.data.join("<br/>"));
         this.updateView();
+    },
+    isFull:function(){//判断是否已满
+        /*遍历data数组，
+         只要发现==0，就返回false
+         如果退出循环，就返回true*/
+        for(var row=0;row<4;row++){//this.data.length=4
+            for(var col=0;col<4;col++){//this.data[row].length=4
+                if(this.data[row][col]==0){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
