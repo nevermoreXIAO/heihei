@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+    <title>Login.html</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=" GB2312
+    ">
+
+    <script type="text/javascript">
+        function checkuser() {
+            if ($('uname' == "js") && $('pwd') == "123") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function $(id) {
+            return document.getElementById(id).value;
+        }
+    </script>
+</head>
+
+<body>
+<form action="ok.html">
+    用户名:<input type="text" id="uname"/><br>
+    密 码:<input type="password" id="pwd"/><br>
+    <input type="submit" value="登录" onclick="return checkuser()"/>
+</form>
+</body>
+</html>
